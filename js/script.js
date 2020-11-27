@@ -1,28 +1,14 @@
 $(document).ready(function(){
 
 
-    $('.formSum').on('submit', function(e){
-        e.preventDefault();
+    var $img = $('#imgHolder img');
+        $colors = $('#colorsSelector button');
 
-        var num1 = Number($('#numberOne').val());
-            num2 = Number($('#numberTwo').val());
-
-        if ( isNaN(numberOne) ){
-            numberOne = 0;
-        }
-
-        if ( isNaN(numberTwo) ){
-            numberTwo = 0;
-        }
-
-        var sum = num1 + num2;
-
-        $('#sumResult').text(sum);
-
-
+    $colors.on('click', function(){
+        var src = $(this).attr('data-img-color');
         
+        $img.attr('src', src);
     });
-
 
 
 
